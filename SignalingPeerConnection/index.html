@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+    <div class="max-w-4xl w-full px-4">
+
+        <!-- Top Row -->
+        <div class="flex items-center justify-center gap-4 mb-6 mt-6">
+            <div id="user-name" class="font-semibold text-lg"></div>
+
+            <button id="call" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md">
+                Call!
+            </button>
+
+            <button id="hangup" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md">
+                Hangup
+            </button>
+
+            <div id="answer" class="flex-1"></div>
+        </div>
+
+        <!-- Videos Section -->
+        <div id="videos" class="flex flex-col md:flex-row gap-6 justify-center items-center">
+
+            <div id="video-wrapper" class="relative flex flex-col items-center gap-3">
+                <div id="waiting" class="bg-yellow-400 text-black px-4 py-2 rounded-md">
+                    Waiting for answer...
+                </div>
+
+                <video
+                    class="w-80 h-56 bg-black rounded-lg"
+                    id="local-video"
+                    autoplay
+                    playsinline
+                    >
+                </video>
+            </div>
+
+            <video
+                class="w-80 h-56 bg-black rounded-lg"
+                id="remote-video"
+                autoplay
+                playsinline
+                >
+            </video>
+
+        </div>
+
+    </div>
+
+    <!-- <script src="/socket.io/socket.io.js"></script> -->
+    <script src="script.js"></script>
+</body>
+</html>
